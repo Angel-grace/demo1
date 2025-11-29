@@ -1,3 +1,4 @@
+import React from "react";
 import { qase } from "jest-qase-reporter/jest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";

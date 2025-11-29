@@ -1,34 +1,39 @@
-require('dotenv').config(); 
- 
+require("dotenv/config");
+
+/** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
-  mode: "testops",
-  fallback: "report",
-  debug: false,
-  environment: "local",
-  captureLogs: true,
-  report: {
-    driver: "local",
-    connection: {
-      local: {
-        path: "./build/qase-report",
-        format: "json"
-      }
-    }
+  testEnvironment: "jsdom",
+  testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"],
+  moduleFileExtensions: ["js", "json", "jsx"],
+  transform: {"^.+\\.[tj]sx?$": "babel-jest"},
+
+  moduleNameMapper: {
+    "^src/(.*)$": "<rootDir>/src/$1",
   },
-  testops: {
-    api: {
-      token: process.env.QASE_TESTOPS_API_TOKEN, 
-      host: "qase.io"
-    },
-    run: {
-      title: "Demo test run",
-      description: "Regress run description",
-      complete: true
-    },
-    defect: false,
-    project: process.env.QASE_TESTOPS_PROJECT, 
-    batch: {
-      size: 100
-    }
-  }
+
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+
+  reporters: [
+    "default",
+    [
+      "jest-qase-reporter",
+      {
+        mode: process.env.QASE_MODE || "report",
+        debug: true,
+        testops: {
+          api: {
+            token: process.env.QASE_API_TOKEN,
+          },
+          project: process.env.QASE_PROJECT_CODE,
+          uploadAttachments: true,
+          run: {
+            title: `unit-test/${process.env.APP_NAME || "github-repo"}`,
+            description: "Automated Test run triggered by Jest tests",
+            complete: true,
+          },
+        },
+      },
+    ],
+  ],
 };

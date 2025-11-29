@@ -1,0 +1,37 @@
+{
+    "attachments": [],
+    "author": null,
+    "execution": {
+        "status": "invalid",
+        "start_time": null,
+        "end_time": null,
+        "duration": 16,
+        "stacktrace": "TypeError: expect(...).not.toBeInTheDocument is not a function\n    at Object.toBeInTheDocument (C:\\Users\\ANGELGRACE\\Documents\\demo\\src\\App.spec.jsx:131:50)\n    at Promise.finally.completed (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1557:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1497:10)\n    at _callCircusTest (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1007:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:947:3)\n    at C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:849:7\n    at _runTestsForDescribeBlock (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:862:11)\n    at _runTestsForDescribeBlock (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:857:11)\n    at run (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:761:3)\n    at runAndTransformResultsToJestFormat (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1918:21)\n    at jestAdapter (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\runner.js:101:19)\n    at runTestInternal (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-runner\\build\\index.js:275:16)\n    at runTest (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-runner\\build\\index.js:343:7)",
+        "thread": null
+    },
+    "fields": {},
+    "message": "Runtime exception",
+    "muted": false,
+    "params": {},
+    "group_params": {},
+    "relations": {
+        "suite": {
+            "data": [
+                {
+                    "title": "C:\\Users\\ANGELGRACE\\Documents\\demo\\src\\App.spec.jsx",
+                    "public_id": null
+                },
+                {
+                    "title": "App Component (Unit Tests)",
+                    "public_id": null
+                }
+            ]
+        }
+    },
+    "run_id": null,
+    "signature": "10::c:\\users\\angelgrace\\documents\\demo\\src\\app.spec.jsx::app_component_(unit_tests)_should_show_message_container_only_when_message_exists_(qase_id:_10)",
+    "steps": [],
+    "testops_id": 10,
+    "id": "16f30d0d-ad2d-4ba3-9e68-64e684ac7e7e",
+    "title": "should show message container only when message exists"
+}

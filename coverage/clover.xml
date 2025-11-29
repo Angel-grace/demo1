@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1764412257218" clover="3.2.0">
+  <project timestamp="1764412257218" name="All files">
+    <metrics statements="13" coveredstatements="9" conditionals="7" coveredconditionals="4" methods="5" coveredmethods="2" elements="25" coveredelements="15" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="App.jsx" path="C:\Users\ANGELGRACE\Documents\demo\src\App.jsx">
+      <metrics statements="13" coveredstatements="9" conditionals="7" coveredconditionals="4" methods="5" coveredmethods="2"/>
+      <line num="4" count="11" type="stmt"/>
+      <line num="5" count="11" type="stmt"/>
+      <line num="6" count="11" type="stmt"/>
+      <line num="7" count="11" type="stmt"/>
+      <line num="9" count="11" type="stmt"/>
+      <line num="10" count="1" type="cond" truecount="2" falsecount="3"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="18" count="11" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

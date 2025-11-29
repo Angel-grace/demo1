@@ -1,0 +1,106 @@
+{
+    "title": "Test report",
+    "execution": {
+        "start_time": 1764412253210,
+        "end_time": 1764412257233,
+        "duration": 4023,
+        "cumulative_duration": 389
+    },
+    "stats": {
+        "total": 10,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 0,
+        "broken": 10,
+        "muted": 0
+    },
+    "results": [
+        {
+            "duration": 51,
+            "id": "82a25440-76cf-4d55-9662-f21c95fcbf4f",
+            "status": "invalid",
+            "thread": null,
+            "title": "should render all input fields and button"
+        },
+        {
+            "duration": 49,
+            "id": "2e8911dd-33b6-45d8-8702-98eac4914d05",
+            "status": "invalid",
+            "thread": null,
+            "title": "should update first name input"
+        },
+        {
+            "duration": 54,
+            "id": "2448700c-a146-47db-93ad-b8045439fd2a",
+            "status": "invalid",
+            "thread": null,
+            "title": "should update last name input"
+        },
+        {
+            "duration": 28,
+            "id": "6c95886f-3d09-436e-a630-1a8ca7bcd4ae",
+            "status": "invalid",
+            "thread": null,
+            "title": "should update age input"
+        },
+        {
+            "duration": 121,
+            "id": "28131f4e-94ea-4717-881e-3e7a4951dc33",
+            "status": "invalid",
+            "thread": null,
+            "title": "should show error when fields are empty"
+        },
+        {
+            "duration": 6,
+            "id": "1259537b-3c2d-43b2-96f7-339d7542524d",
+            "status": "invalid",
+            "thread": null,
+            "title": "should show error when first name is missing"
+        },
+        {
+            "duration": 21,
+            "id": "2b0c5443-ece2-49a6-b51e-3cf8e6973a61",
+            "status": "invalid",
+            "thread": null,
+            "title": "should show error when last name is missing"
+        },
+        {
+            "duration": 19,
+            "id": "723e8cf1-10a6-47e2-a94f-b6fc652ffa46",
+            "status": "invalid",
+            "thread": null,
+            "title": "should show error when age is missing"
+        },
+        {
+            "duration": 24,
+            "id": "e11d5cea-c36b-411a-b5c9-e0e539685a5f",
+            "status": "invalid",
+            "thread": null,
+            "title": "should display correct message when all fields are filled"
+        },
+        {
+            "duration": 16,
+            "id": "16f30d0d-ad2d-4ba3-9e68-64e684ac7e7e",
+            "status": "invalid",
+            "thread": null,
+            "title": "should show message container only when message exists"
+        }
+    ],
+    "threads": [],
+    "suites": [],
+    "environment": "",
+    "host_data": {
+        "system": "win32",
+        "machineName": "pente-002",
+        "release": "10.0.26100",
+        "version": "Microsoft Windows [Version 10.0.26100.7171]",
+        "arch": "x64",
+        "node": "v22.17.0",
+        "npm": "10.9.2",
+        "framework": "30.2.0",
+        "reporter": "2.1.3",
+        "commons": "2.4.12",
+        "apiClientV1": "1.1.0",
+        "apiClientV2": "1.0.4"
+    }
+}

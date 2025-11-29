@@ -1,0 +1,37 @@
+{
+    "attachments": [],
+    "author": null,
+    "execution": {
+        "status": "invalid",
+        "start_time": null,
+        "end_time": null,
+        "duration": 24,
+        "stacktrace": "TestingLibraryElementError: Found a label with the text of: /First Name/i, however no form control was found associated to that label. Make sure you're using the \"for\" attribute or \"aria-labelledby\" attribute correctly.\n\nIgnored nodes: comments, script, style\n<body>\n  <div>\n    <div\n      style=\"padding: 20px; font-family: Arial;\"\n    >\n      <h2>\n        User Age Processor\n      </h2>\n      <div\n        style=\"margin-bottom: 10px;\"\n      >\n        <label>\n          First Name: \n        </label>\n        <input\n          type=\"text\"\n          value=\"\"\n        />\n      </div>\n      <div\n        style=\"margin-bottom: 10px;\"\n      >\n        <label>\n          Last Name: \n        </label>\n        <input\n          type=\"text\"\n          value=\"\"\n        />\n      </div>\n      <div\n        style=\"margin-bottom: 10px;\"\n      >\n        <label>\n          Age: \n        </label>\n        <input\n          type=\"number\"\n          value=\"\"\n        />\n      </div>\n      <button>\n        Process\n      </button>\n    </div>\n  </div>\n</body>\n    at Object.getElementError (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\@testing-library\\dom\\dist\\config.js:37:19)\n    at getAllByLabelText (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\@testing-library\\dom\\dist\\queries\\label-text.js:108:40)\n    at C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:52:17\n    at C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:95:19\n    at Object.getByLabelText (C:\\Users\\ANGELGRACE\\Documents\\demo\\src\\App.spec.jsx:115:31)\n    at Promise.finally.completed (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1557:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1497:10)\n    at _callCircusTest (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1007:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:947:3)\n    at C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:849:7\n    at _runTestsForDescribeBlock (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:862:11)\n    at _runTestsForDescribeBlock (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:857:11)\n    at run (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:761:3)\n    at runAndTransformResultsToJestFormat (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\jestAdapterInit.js:1918:21)\n    at jestAdapter (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-circus\\build\\runner.js:101:19)\n    at runTestInternal (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-runner\\build\\index.js:275:16)\n    at runTest (C:\\Users\\ANGELGRACE\\Documents\\demo\\node_modules\\jest-runner\\build\\index.js:343:7)",
+        "thread": null
+    },
+    "fields": {},
+    "message": "Runtime exception",
+    "muted": false,
+    "params": {},
+    "group_params": {},
+    "relations": {
+        "suite": {
+            "data": [
+                {
+                    "title": "C:\\Users\\ANGELGRACE\\Documents\\demo\\src\\App.spec.jsx",
+                    "public_id": null
+                },
+                {
+                    "title": "App Component (Unit Tests)",
+                    "public_id": null
+                }
+            ]
+        }
+    },
+    "run_id": null,
+    "signature": "9::c:\\users\\angelgrace\\documents\\demo\\src\\app.spec.jsx::app_component_(unit_tests)_should_display_correct_message_when_all_fields_are_filled_(qase_id:_9)",
+    "steps": [],
+    "testops_id": 9,
+    "id": "e11d5cea-c36b-411a-b5c9-e0e539685a5f",
+    "title": "should display correct message when all fields are filled"
+}
