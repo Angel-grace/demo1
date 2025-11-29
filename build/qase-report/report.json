@@ -1,87 +1,87 @@
 {
     "title": "Test report",
     "execution": {
-        "start_time": 1764412253210,
-        "end_time": 1764412257233,
-        "duration": 4023,
-        "cumulative_duration": 389
+        "start_time": 1764414923514,
+        "end_time": 1764414925700,
+        "duration": 2186,
+        "cumulative_duration": 169
     },
     "stats": {
         "total": 10,
-        "passed": 0,
+        "passed": 10,
         "failed": 0,
         "skipped": 0,
-        "broken": 10,
+        "broken": 0,
         "muted": 0
     },
     "results": [
         {
-            "duration": 51,
-            "id": "82a25440-76cf-4d55-9662-f21c95fcbf4f",
-            "status": "invalid",
+            "duration": 68,
+            "id": "015f3536-9770-4757-9472-10342b716f2a",
+            "status": "passed",
             "thread": null,
             "title": "should render all input fields and button"
         },
         {
-            "duration": 49,
-            "id": "2e8911dd-33b6-45d8-8702-98eac4914d05",
-            "status": "invalid",
+            "duration": 11,
+            "id": "a1ef1040-491e-412b-942d-a55b9a613131",
+            "status": "passed",
             "thread": null,
             "title": "should update first name input"
         },
         {
-            "duration": 54,
-            "id": "2448700c-a146-47db-93ad-b8045439fd2a",
-            "status": "invalid",
+            "duration": 6,
+            "id": "6aa9dcc1-e879-42bc-a38e-9d2d487190a7",
+            "status": "passed",
             "thread": null,
             "title": "should update last name input"
         },
         {
-            "duration": 28,
-            "id": "6c95886f-3d09-436e-a630-1a8ca7bcd4ae",
-            "status": "invalid",
+            "duration": 7,
+            "id": "434d997a-6468-4528-841b-8d7404c0684a",
+            "status": "passed",
             "thread": null,
             "title": "should update age input"
         },
         {
-            "duration": 121,
-            "id": "28131f4e-94ea-4717-881e-3e7a4951dc33",
-            "status": "invalid",
+            "duration": 14,
+            "id": "068cfa6e-2349-479f-948b-8dd40448a40b",
+            "status": "passed",
             "thread": null,
             "title": "should show error when fields are empty"
         },
         {
-            "duration": 6,
-            "id": "1259537b-3c2d-43b2-96f7-339d7542524d",
-            "status": "invalid",
+            "duration": 15,
+            "id": "5d0f4f89-f22f-4cc1-ba70-736b3ca16e4a",
+            "status": "passed",
             "thread": null,
             "title": "should show error when first name is missing"
         },
         {
-            "duration": 21,
-            "id": "2b0c5443-ece2-49a6-b51e-3cf8e6973a61",
-            "status": "invalid",
+            "duration": 11,
+            "id": "cf4c9083-d093-4470-983f-9322f5e348b2",
+            "status": "passed",
             "thread": null,
             "title": "should show error when last name is missing"
         },
         {
-            "duration": 19,
-            "id": "723e8cf1-10a6-47e2-a94f-b6fc652ffa46",
-            "status": "invalid",
+            "duration": 13,
+            "id": "07acd722-219b-4bc2-b51d-403c820da168",
+            "status": "passed",
             "thread": null,
             "title": "should show error when age is missing"
         },
         {
-            "duration": 24,
-            "id": "e11d5cea-c36b-411a-b5c9-e0e539685a5f",
-            "status": "invalid",
+            "duration": 13,
+            "id": "abaaf00d-a363-4843-9f37-c912805d6b7d",
+            "status": "passed",
             "thread": null,
             "title": "should display correct message when all fields are filled"
         },
         {
-            "duration": 16,
-            "id": "16f30d0d-ad2d-4ba3-9e68-64e684ac7e7e",
-            "status": "invalid",
+            "duration": 11,
+            "id": "662dd59f-6b0b-407f-a492-95dd6a1bc8ed",
+            "status": "passed",
             "thread": null,
             "title": "should show message container only when message exists"
         }

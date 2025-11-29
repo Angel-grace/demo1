@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-function App() {
+function NameAgeProcessor() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
@@ -8,7 +8,7 @@ function App() {
 
   const handleProcess = () => {
     if (!firstName || !lastName || !age) {
-      setMessage("Please fill all fields!");
+      setMessage("Please enter all fields!");
       return;
     }
 
@@ -17,42 +17,50 @@ function App() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h2>User Age Processor</h2>
+      <h2>Name & Age Processor</h2>
 
-      <div style={{ marginBottom: "10px" }}>
-        <label>First Name: </label>
-        <input
-          type="text"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-      </div>
+      <input
+        type="text"
+        placeholder="First Name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        style={{ margin: "5px", padding: "8px" }}
+      />
 
-      <div style={{ marginBottom: "10px" }}>
-        <label>Last Name: </label>
-        <input
-          type="text"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-      </div>
+      <input
+        type="text"
+        placeholder="Last Name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        style={{ margin: "5px", padding: "8px" }}
+      />
 
-      <div style={{ marginBottom: "10px" }}>
-        <label>Age: </label>
-        <input
-          type="number"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-      </div>
+      <input
+        type="number"
+        placeholder="Age"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        style={{ margin: "5px", padding: "8px" }}
+      />
 
-      <button onClick={handleProcess}>Process</button>
+      <br />
+
+      <button
+        onClick={handleProcess}
+        style={{
+          marginTop: "10px",
+          padding: "10px 20px",
+          cursor: "pointer",
+        }}
+      >
+        Process
+      </button>
 
       {message && (
-        <p style={{ marginTop: "20px", fontWeight: "bold" }}>{message}</p>
+        <p style={{ marginTop: "15px", fontWeight: "bold" }}>{message}</p>
       )}
     </div>
   );
 }
 
-export default App;
+export default NameAgeProcessor;

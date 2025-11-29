@@ -1,20 +1,20 @@
 import React from "react";
 import { qase } from "jest-qase-reporter/jest";
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom"; 
 import App from "./App";
 
 describe("App Component (Unit Tests)", () => {
-  
+
   test(
     qase(1, "should render all input fields and button"),
     () => {
       render(<App />);
 
-      expect(screen.getByLabelText(/First Name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/Last Name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/Age/i)).toBeInTheDocument();
+      expect(screen.getByPlaceholderText(/First Name/i)).toBeInTheDocument();
+      expect(screen.getByPlaceholderText(/Last Name/i)).toBeInTheDocument();
+      expect(screen.getByPlaceholderText(/Age/i)).toBeInTheDocument();
       expect(screen.getByRole("button", { name: /process/i })).toBeInTheDocument();
-      expect(screen.queryByText(/Please fill all fields!/i)).not.toBeInTheDocument();
     }
   );
 
@@ -22,7 +22,7 @@ describe("App Component (Unit Tests)", () => {
     qase(2, "should update first name input"),
     () => {
       render(<App />);
-      const input = screen.getByLabelText(/First Name/i);
+      const input = screen.getByPlaceholderText(/First Name/i);
 
       fireEvent.change(input, { target: { value: "John" } });
 
@@ -34,7 +34,7 @@ describe("App Component (Unit Tests)", () => {
     qase(3, "should update last name input"),
     () => {
       render(<App />);
-      const input = screen.getByLabelText(/Last Name/i);
+      const input = screen.getByPlaceholderText(/Last Name/i);
 
       fireEvent.change(input, { target: { value: "Doe" } });
 
@@ -46,7 +46,7 @@ describe("App Component (Unit Tests)", () => {
     qase(4, "should update age input"),
     () => {
       render(<App />);
-      const input = screen.getByLabelText(/Age/i);
+      const input = screen.getByPlaceholderText(/Age/i);
 
       fireEvent.change(input, { target: { value: "25" } });
 
@@ -61,7 +61,7 @@ describe("App Component (Unit Tests)", () => {
 
       fireEvent.click(screen.getByRole("button", { name: /process/i }));
 
-      expect(screen.getByText("Please fill all fields!")).toBeInTheDocument();
+      expect(screen.getByText("Please enter all fields!")).toBeInTheDocument();
     }
   );
 
@@ -70,12 +70,12 @@ describe("App Component (Unit Tests)", () => {
     () => {
       render(<App />);
 
-      fireEvent.change(screen.getByLabelText(/Last Name/i), { target: { value: "Doe" } });
-      fireEvent.change(screen.getByLabelText(/Age/i), { target: { value: "30" } });
+      fireEvent.change(screen.getByPlaceholderText(/Last Name/i), { target: { value: "Doe" } });
+      fireEvent.change(screen.getByPlaceholderText(/Age/i), { target: { value: "30" } });
 
       fireEvent.click(screen.getByRole("button", { name: /process/i }));
 
-      expect(screen.getByText("Please fill all fields!")).toBeInTheDocument();
+      expect(screen.getByText("Please enter all fields!")).toBeInTheDocument();
     }
   );
 
@@ -84,12 +84,12 @@ describe("App Component (Unit Tests)", () => {
     () => {
       render(<App />);
 
-      fireEvent.change(screen.getByLabelText(/First Name/i), { target: { value: "John" } });
-      fireEvent.change(screen.getByLabelText(/Age/i), { target: { value: "30" } });
+      fireEvent.change(screen.getByPlaceholderText(/First Name/i), { target: { value: "John" } });
+      fireEvent.change(screen.getByPlaceholderText(/Age/i), { target: { value: "30" } });
 
       fireEvent.click(screen.getByRole("button", { name: /process/i }));
 
-      expect(screen.getByText("Please fill all fields!")).toBeInTheDocument();
+      expect(screen.getByText("Please enter all fields!")).toBeInTheDocument();
     }
   );
 
@@ -98,12 +98,12 @@ describe("App Component (Unit Tests)", () => {
     () => {
       render(<App />);
 
-      fireEvent.change(screen.getByLabelText(/First Name/i), { target: { value: "John" } });
-      fireEvent.change(screen.getByLabelText(/Last Name/i), { target: { value: "Doe" } });
+      fireEvent.change(screen.getByPlaceholderText(/First Name/i), { target: { value: "John" } });
+      fireEvent.change(screen.getByPlaceholderText(/Last Name/i), { target: { value: "Doe" } });
 
       fireEvent.click(screen.getByRole("button", { name: /process/i }));
 
-      expect(screen.getByText("Please fill all fields!")).toBeInTheDocument();
+      expect(screen.getByText("Please enter all fields!")).toBeInTheDocument();
     }
   );
 
@@ -112,9 +112,9 @@ describe("App Component (Unit Tests)", () => {
     () => {
       render(<App />);
 
-      fireEvent.change(screen.getByLabelText(/First Name/i), { target: { value: "John" } });
-      fireEvent.change(screen.getByLabelText(/Last Name/i), { target: { value: "Doe" } });
-      fireEvent.change(screen.getByLabelText(/Age/i), { target: { value: "25" } });
+      fireEvent.change(screen.getByPlaceholderText(/First Name/i), { target: { value: "John" } });
+      fireEvent.change(screen.getByPlaceholderText(/Last Name/i), { target: { value: "Doe" } });
+      fireEvent.change(screen.getByPlaceholderText(/Age/i), { target: { value: "25" } });
 
       fireEvent.click(screen.getByRole("button", { name: /process/i }));
 
@@ -127,13 +127,12 @@ describe("App Component (Unit Tests)", () => {
     () => {
       render(<App />);
 
-      // Initially no message
-      expect(screen.queryByText(/The Age/i)).not.toBeInTheDocument();
+      expect(screen.queryByText(/The Age/i)).toBeNull();
 
-      // Trigger message
-      fireEvent.change(screen.getByLabelText(/First Name/i), { target: { value: "Jane" } });
-      fireEvent.change(screen.getByLabelText(/Last Name/i), { target: { value: "Doe" } });
-      fireEvent.change(screen.getByLabelText(/Age/i), { target: { value: "28" } });
+      fireEvent.change(screen.getByPlaceholderText(/First Name/i), { target: { value: "Jane" } });
+      fireEvent.change(screen.getByPlaceholderText(/Last Name/i), { target: { value: "Doe" } });
+      fireEvent.change(screen.getByPlaceholderText(/Age/i), { target: { value: "28" } });
+
       fireEvent.click(screen.getByRole("button", { name: /process/i }));
 
       expect(screen.getByText("The Age of Jane Doe is 28")).toBeInTheDocument();
